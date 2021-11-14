@@ -1,0 +1,26 @@
+{
+  "log_statements": [
+    {
+      "id": 1,
+      "readable_id": "THIS_IS_AN_ID",
+      "description": "this is a test",
+      "output": ["json", "syslog"],
+      "encryption": false,
+      "arguments": [
+        { "name": "tubeTemp", "type": "int" },
+        { "name": "userMessage", "type": "string" },
+        { "name": "someValue", "type": "float" }
+      ]
+    },
+    {
+      "id": 2,
+      "readable_id": "THIS_IS_AN_OTHER_ID",
+      "description": "this is a another test",
+      "output": ["json", "syslog"],
+      "encryption": true,
+      "arguments": [
+        { "name": "EPX", "type": "string" }
+      ]
+    }
+  ]
+}
