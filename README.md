@@ -22,5 +22,5 @@ For ease of implementation, we use JSON instead of a full-blown DSL to define th
 A Python script reads the JSON file and generates the actual log-statements in the target language (C++ in this case).
 
 ```zsh
-./generate-cpp.py log-interface.json log-statements/log-statements.cpp log-statements/log-statements.h
+./generate-cpp.py log-interface.json log-lib/log-lib.cpp log-lib/log-lib.h
 ```
