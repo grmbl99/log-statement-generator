@@ -32,3 +32,5 @@
 *.app
 
 build/
+log-statements/log-statements.cpp
+log-statements/log-statements.h

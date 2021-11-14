@@ -17,7 +17,7 @@ void THIS_IS_AN_ID (string context, int tubeTemp, string userMessage, float some
 	cout
 		<< msTimeStamp() << endl
 		<< "context: " << context << endl
-		<< "this is a test" << endl
+		<< "this is another testtst" << endl
 		<< "	tubeTemp: " << tubeTemp << endl
 		<< "	userMessage: " << userMessage << endl
 		<< "	someValue: " << someValue << endl;

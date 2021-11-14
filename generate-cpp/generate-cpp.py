@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 import sys
 import json
+import pathlib
+
+mypath=(pathlib.Path(__file__).parent.resolve())
 
 if len(sys.argv) < 4:
   print("Usage: %s <input_json_file> <output_src_file> <output_h_file>" % sys.argv[0])
@@ -9,8 +12,8 @@ if len(sys.argv) < 4:
 with open(sys.argv[1], 'r') as json_file:
   with open(sys.argv[2], 'w') as src_file:
     with open(sys.argv[3], 'w') as h_file:
-      with open('boilerplate_cpp.txt', 'r') as src_boilerplate:
-        with open('boilerplate_h.txt', 'r') as h_boilerplate:
+      with open(mypath/'boilerplate_cpp.txt', 'r') as src_boilerplate:
+        with open(mypath/'boilerplate_h.txt', 'r') as h_boilerplate:
           loggingDSL = json.load(json_file)
 
           src_file.write(src_boilerplate.read())

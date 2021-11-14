@@ -3,7 +3,7 @@
     {
       "id": 1,
       "readable_id": "THIS_IS_AN_ID",
-      "description": "this is a test",
+      "description": "this is another testtst",
       "output": ["json", "syslog"],
       "encryption": false,
       "arguments": [
