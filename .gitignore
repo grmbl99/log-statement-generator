@@ -32,5 +32,5 @@
 *.app
 
 build/
-LogLib/LogLib.cpp
-LogLib/LogLib.h
+log-lib/log-lib.cpp
+log-lib/log-lib.h
