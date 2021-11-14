@@ -1,10 +1,10 @@
 cmake_minimum_required(VERSION 3.7)
-project(TestLogging)
-add_subdirectory(log-statements)
-add_executable(test-logging test-logging.cpp)
-target_link_libraries(test-logging PUBLIC log-statements)
-target_include_directories(
-  test-logging PUBLIC
-  "${PROJECT_BINARY_DIR}"
-)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -Werror")
+project(TestLogging VERSION 1.0)
+
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Werror")
+
+add_subdirectory(LogLib)
+add_executable(TestLogging TestLogging.cpp)
+target_link_libraries(TestLogging PUBLIC LogLib)

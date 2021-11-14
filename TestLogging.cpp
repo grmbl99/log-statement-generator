@@ -1,4 +1,4 @@
-#include "log-statements.h"
+#include "LogLib.h"
 
 int main() {
 	THIS_IS_AN_ID(LOGCONTEXT, 2, "hello", 2.0);

@@ -1,5 +1,5 @@
-#ifndef LOG_STATEMENTS_H_INCLUDED
-#define LOG_STATEMENTS_H_INCLUDED
+#ifndef LOGLIB_H_INCLUDED
+#define LOGLIB_H_INCLUDED
 
 #include <iostream>
 #include <chrono>
