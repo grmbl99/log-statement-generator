@@ -12,15 +12,8 @@
         { "name": "someValue", "type": "float" }
       ]
     },
-    {
-      "id": 2,
-      "readable_id": "THIS_IS_AN_OTHER_ID",
-      "description": "this is a another test",
-      "output": ["cout", "syslog"],
-      "encryption": true,
-      "arguments": [
-        { "name": "EPX", "type": "string" }
-      ]
-    }
+    {"id": 2,"readable_id": "THIS_IS_AN_OTHER_ID","description": "this is a another test","output": ["cout", "syslog"],"encryption": true,"arguments": [{ "name": "EPX", "type": "string" }]},
+    {"id": 3,"readable_id": "THIS_IS_AN_YET_OTHER_ID","description": "this is a another test","output": ["cout", "syslog"],"encryption": true,"arguments": [{ "name": "EPX", "type": "string" }]},
+    {"id": 4,"readable_id": "THIS_IS_AN_YET_YET_OTHER_ID","description": "this is a another test","output": ["cout", "syslog"],"encryption": true,"arguments": [{ "name": "EPX", "type": "string" }]}
   ]
 }

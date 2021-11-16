@@ -2,7 +2,6 @@
 import sys
 import json
 import pathlib
-from typing import Match
 
 def writeFunctionHeader(file,logStatement):
   file.write('void %s (string context, ' % (logStatement['readable_id']))
