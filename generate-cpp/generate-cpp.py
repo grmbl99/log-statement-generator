@@ -32,28 +32,28 @@ if len(sys.argv) < 4:
   exit(1)
 
 with open(sys.argv[1], 'r') as json_file, \
-     open(sys.argv[2], 'w') as src_file, \
+     open(sys.argv[2], 'w') as cpp_file, \
      open(sys.argv[3], 'w') as h_file, \
-     open(mypath/'boilerplate-cpp.txt', 'r') as src_boilerplate, \
+     open(mypath/'boilerplate-cpp.txt', 'r') as cpp_boilerplate, \
      open(mypath/'boilerplate-h.txt', 'r') as h_boilerplate:
   loggingDSL = json.load(json_file)
 
-  src_file.write(src_boilerplate.read())
+  cpp_file.write(cpp_boilerplate.read())
   h_file.write(h_boilerplate.read())
 
   for logStatement in loggingDSL['log_statements']:
     writeFunctionHeader(h_file,logStatement)
     h_file.write(';\n')
 
-    writeFunctionHeader(src_file,logStatement)
-    src_file.write(' {\n')
+    writeFunctionHeader(cpp_file,logStatement)
+    cpp_file.write(' {\n')
 
     for output in logStatement['output']:
       if output == 'cout':
-        writeFunctionBody_cout(src_file,logStatement)
+        writeFunctionBody_cout(cpp_file,logStatement)
       else:
         print('Unsupported output type: %s' % output)
 
-    src_file.write('}\n\n')
+    cpp_file.write('}\n\n')
 
   h_file.write('\n#endif\n')
