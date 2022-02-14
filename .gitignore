@@ -35,3 +35,6 @@ build/
 CMakeFiles/
 log-lib/log-lib.cpp
 log-lib/log-lib.h
+CMakeCache.txt
+Makefile
+cmake_install.cmake
