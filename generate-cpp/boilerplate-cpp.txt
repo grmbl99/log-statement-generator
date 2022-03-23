@@ -1,4 +1,5 @@
 #include "log-lib.h"
+#include <inttypes.h>
 
 char* msTimeStamp(){
 	auto timepoint = system_clock::now();
@@ -8,7 +9,7 @@ char* msTimeStamp(){
 	static char buffer[sizeof "9999-12-31 23:59:59.999"];
 	snprintf(
 		buffer + strftime(buffer, sizeof buffer - 3, "%F %T.", localtime(&coarse)), 4, 
-		"%03lld", fine.time_since_epoch().count() % 1000);
+		"%03" PRIi64, fine.time_since_epoch().count() % 1000);
 
 	return buffer;
 }
